@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fffefe;
+}
+
+h1 {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 13px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 60px 0;
+}
+
+.kolom-member {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.member-image {
+  display: flex;
+  width: 271px;
+  height: 301px;
+  border-radius: 10px;
+  margin: 15px 0 0 0;
+}
+
+.member-image img {
+  width: 270px;
+  height: 300px;
+  box-shadow: 2px 2px 5px 1px;
+  border-radius: 15px;
+}
+
+.sosial-media {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sosial-media ul {
+  display: flex;
+  gap: 25px;
+}
+
+.sosial-media li {
+  list-style-type: none;
+}
+
+.sosial-media li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  transition: all 0.1s ease-in-out;
+}
+
+.sosial-media li a:hover {
+  color: red;
+}
+
+table {
+  text-align: left;
+  font-size: 20px;
+}
+
+table th {
+  padding: 10px;
+  color: white;
+  background-color: #021c1e;
+  font-weight: 750;
+}
+
+table td {
+  padding: 10px;
+  font-weight: 450;
+}
+
+span {
+  color: red;
+}
+
+.back-t {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.back-t i {
+  font-size: 30px;
+  font-weight: 600;
+  padding-right: 10px;
+  padding-left: 10px;
+  transform: .5s;
+}
+
+.back-t a:hover {
+  color: red;
+}
+
+@media screen and (max-width: 550px) {
+  h1{
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  table{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  table th {
+    padding: 8px;
+  }
+
+  table td{
+    padding: 8px;
+  }
+
+}
