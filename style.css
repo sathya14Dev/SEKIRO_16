@@ -24,25 +24,22 @@ header {
   justify-content: center;
   backdrop-filter: blur(90px);
   position: fixed;
-  z-index: 1000;
+  z-index: 99;
 }
 
 .blur h1 {
   font-weight: bolder;
+  margin-bottom: 15px;
 }
 
 .blur button {
   color: white;
-  width: 100px;
+  width: 120px;
   height: 40px;
-  background-color: blue;
+  background-color: #162938;
   font-size: 20px;
   font-weight: 800;
-}
-
-.blur button:hover {
-  transform: scale(1.1);
-  border: 1px solid yellow;
+  cursor: pointer;
 }
 
 button{
