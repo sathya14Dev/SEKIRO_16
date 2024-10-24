@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #021c1e;
+  /* background: linear-gradient(180deg, red, blue); */
+}
+
+button {
+  border-radius: 5px;
+  width: 90px;
+  height: 35px;
+  color: white;
+  background-color: rgb(1, 62, 86);
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.lg {
+  display: flex;
+  justify-content: end;
+  margin-right: 5px;
+  gap: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fffefe;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  /* Mengatur lebar kolom input menjadi 100% dari elemen kontainer */
+  padding: 12px 20px;
+  /* Memberikan jarak di dalam kolom input dari batasnya (atas/bawah 12px, kiri/kanan 20px) */
+  margin: 8px 0;
+  /* Memberikan jarak di luar kolom input (atas/bawah 8px) */
+  display: inline-block;
+  /* Menampilkan kolom input secara inline-block */
+  border: 1px solid #ccc;
+  /* Memberikan border 1px dengan warna abu-abu terang pada kolom input */
+  box-sizing: border-box;
+  /* Mengatur box-sizing sehingga padding dan border termasuk dalam lebar total kolom input */
+}
+
+.cancelbtn {
+  width: 75px;
+  /* Mengatur lebar tombol pembatalan agar sesuai dengan kontennya */
+  /* Memberikan jarak di dalam tombol pembatalan (atas/bawah 10px, kiri/kanan 18px) */
+  background-color: #f44336;
+  /* Mengatur warna latar belakang tombol pembatalan menjadi merah */
+  cursor: pointer;
+}
+
+.imgcontainer {
+  text-align: center;
+  /* Mengatur teks di dalam kontainer gambar agar terpusat */
+  margin: 24px 0 12px 0;
+  /* Memberikan jarak di luar kontainer gambar (atas/bawah 24px, bawah 12px) */
+  position: relative;
+  /* Mengatur posisi kontainer gambar sebagai relatif agar elemen yang diposisikan absolut di dalamnya dapat diposisikan relatif terhadap kontainer */
+}
+
+img.avatar {
+  width: 100px;
+  height: 100px;
+  /* Mengatur lebar gambar avatar dari lebar elemen kontainer */
+  border-radius: 50%;
+  /* Membuat gambar avatar berbentuk bulat dengan border radius 50% */
+}
+
+.container {
+  padding: 16px;
+  /* Memberikan jarak di dalam kontainer (atas/bawah/kanan/kiri 16px) */
+}
+
+.coba {
+  width: 100%;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+span.haa {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  gap: 5px;
+}
+
+span.haa a{
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+span.haa a:hover {
+  color: red;
+}
+
+span.dha {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  gap: 5px;
+}
+
+span.dha a{
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+span.dha a:hover {
+  color: red;
+}
+
+span.psw a{
+  float: right;
+  /* Mengatur posisi span untuk berada di sebelah kanan */
+  color: black;
+  text-decoration: none;
+}
+
+span.psw a:hover {
+  color: red;
+}
+
+.modal1 {
+  display: none;
+  /* Mengatur modal untuk tersembunyi secara default */
+  position: fixed;
+  /* Mengatur posisi modal agar tetap di tempat meskipun halaman digulir */
+  z-index: 1;
+  /* Mengatur z-index agar modal berada di atas elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Mengatur lebar modal menjadi 100% dari lebar layar */
+  height: 100%;
+  /* Mengatur tinggi modal menjadi 100% dari tinggi layar */
+  overflow: auto;
+  /* Mengizinkan gulir jika konten modal melebihi ukuran layar */
+  background-color: rgb(0, 0, 0);
+  /* Warna latar belakang modal sebagai fallback, jika rgba tidak didukung */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Mengatur warna latar belakang modal menjadi hitam dengan opacity 0.4 */
+  padding-top: 60px;
+  /* Memberikan jarak di atas modal (atas 60px) */
+}
+
+.modal2 {
+  display: none;
+  /* Mengatur modal untuk tersembunyi secara default */
+  position: fixed;
+  /* Mengatur posisi modal agar tetap di tempat meskipun halaman digulir */
+  z-index: 1;
+  /* Mengatur z-index agar modal berada di atas elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Mengatur lebar modal menjadi 100% dari lebar layar */
+  height: 100%;
+  /* Mengatur tinggi modal menjadi 100% dari tinggi layar */
+  overflow: auto;
+  /* Mengizinkan gulir jika konten modal melebihi ukuran layar */
+  background-color: rgb(0, 0, 0);
+  /* Warna latar belakang modal sebagai fallback, jika rgba tidak didukung */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Mengatur warna latar belakang modal menjadi hitam dengan opacity 0.4 */
+  padding-top: 40px;
+  /* Memberikan jarak di atas modal (atas 60px) */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  /* Mengatur warna latar belakang konten modal menjadi putih */
+  margin: 5% auto 15% auto;
+  /* Memberikan margin agar konten modal terpusat dengan jarak 5% dari atas dan 15% dari bawah */
+  border: 1px solid #888;
+  /* Memberikan border 1px dengan warna abu-abu sedang pada konten modal */
+  width: 50%;
+  /* Mengatur lebar konten modal menjadi 80% dari lebar layar */
+}
+
+.close {
+  position: absolute;
+  /* Mengatur posisi tombol tutup sebagai absolut di dalam kontainer modal */
+  right: 25px;
+  /* Mengatur posisi tombol tutup 25px dari tepi kanan kontainer modal */
+  top: 0;
+  /* Mengatur posisi tombol tutup 0px dari tepi atas kontainer modal */
+  color: #000;
+  /* Mengatur warna teks tombol tutup menjadi hitam */
+  font-size: 35px;
+  /* Mengatur ukuran font tombol tutup menjadi 35px */
+  font-weight: bold;
+  /* Mengatur ketebalan font tombol tutup menjadi tebal */
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  /* Mengubah warna teks tombol tutup menjadi merah saat kursor berada di atasnya atau saat fokus */
+  cursor: pointer;
+  /* Mengubah bentuk kursor menjadi pointer saat kursor berada di atas tombol tutup */
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  /* Menggunakan animasi zoom untuk browser berbasis Webkit (seperti Chrome dan Safari) selama 0.6 detik */
+  animation: animatezoom 0.6s;
+  /* Menggunakan animasi zoom untuk browser lainnya selama 0.6 detik */
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+    /* Mengatur transformasi untuk memulai dari skala 0 (tersembunyi) */
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    /* Mengatur transformasi untuk berakhir pada skala 1 (ukuran penuh) */
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+    /* Mengatur transformasi untuk memulai dari skala 0 (tersembunyi) */
+  }
+
+  to {
+    transform: scale(1);
+    /* Mengatur transformasi untuk berakhir pada skala 1 (ukuran penuh) */
+  }
+}
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 40px;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.home h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+span {
+  color: red;
+}
+
+.kolom-member {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 350px;
+  height: 520px;
+}
+
+.member-image {
+  display: flex;
+  width: 301px;
+  height: 401px;
+  border-radius: 10px;
+  margin: 15px 0 15px 0;
+}
+
+.member-image img {
+  width: 300px;
+  height: 400px;
+  box-shadow: 2px 2px 5px 1px;
+  border-radius: 15px;
+}
+
+.tombol {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.tombol button {
+  border-radius: 15px;
+  width: 160px;
+  height: 45px;
+  background-color: red;
+  font-size: 16px;
+  font-weight: 600;
+  transform: .5s;
+}
+
+.tombol button:hover {
+  color: black;
+  transform: scale(1.1);
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .member {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .home h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  .home h2 {
+    font-size: 22px;
+  }
+
+  .title h2 {
+    font-size: 22px;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 401px) {
+  .member {
+    width: 330px;
+    height: 490px;
+  }
+
+  .home h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .member-image {
+    display: flex;
+    width: 270px;
+    height: 370px;
+    margin: 15px 0 15px 0;
+  }
+
+  .member-image img {
+    width: 270px;
+    height: 370px;
+  }
+
+  .tombol {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  .home h2 {
+    font-size: 19px;
+  }
+
+  .title h2 {
+    font-size: 22px;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+}

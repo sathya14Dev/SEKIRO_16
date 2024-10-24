@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style-login.css" />
+  <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+  <script src="script.js"></script>
+  <title>KELOMPOK SEKIRO</title>
+</head>
+
+<body>
+  <header>
+    <h1>Kelompok SEKIRO(隻狼)</h1>
+  </header>
+
+  <div class="lg">
+    <button onclick="document.getElementById('id01').style.display='block'">
+      Login
+    </button>
+    <button onclick="document.getElementById('id02').style.display='block'">
+      Register
+    </button>
+  </div>
+
+  <main>
+    <div class="home">
+      <h2>Kelompok SEKIRO terdiri dari 3 member <span>Wota</span></h2>
+    </div>
+
+    <div id="id01" class="modal1">
+      <!-- Kontainer untuk modal yang awalnya disembunyikan (display: none) -->
+      <form class="modal-content animate" action="index.html" method="post">
+        <!-- Formulir di dalam modal, menggunakan kelas modal-content untuk styling dan animate untuk animasi -->
+        <!-- action menentukan URL tujuan saat formulir dikirimkan, method POST mengirimkan data dengan cara POST -->
+
+        <div class="imgcontainer">
+          <!-- Kontainer untuk gambar avatar dan tombol tutup modal -->
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
+            &times;
+          </span>
+          <!-- Tombol untuk menutup modal, menampilkan simbol "×". Mengklik tombol ini akan mengatur display modal menjadi none -->
+          <img src="https://ih1.redbubble.net/image.1542620312.4009/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+            alt="Avatar" class="avatar" />
+          <!-- Gambar avatar di dalam modal, menggunakan kelas avatar untuk styling -->
+        </div>
+
+        <div class="container">
+          <!-- Kontainer untuk kolom input dan tombol di dalam formulir -->
+          <label for="uname"><b>Username</b></label>
+          <!-- Label untuk kolom input nama pengguna, dengan atribut for yang mengaitkan label dengan kolom input -->
+          <input type="text" placeholder="Enter Username" name="uname" required />
+          <!-- Kolom input untuk nama pengguna, dengan placeholder sebagai petunjuk dan required menjadikannya wajib diisi -->
+          <label for="psw"><b>Password</b></label>
+          <!-- Label untuk kolom input kata sandi -->
+          <input type="password" placeholder="Enter Password" name="psw" required />
+          <!-- Kolom input untuk kata sandi, dengan placeholder sebagai petunjuk dan required menjadikannya wajib diisi -->
+          <label>
+            <input type="checkbox" checked="checked" name="remember" />
+            Remember me
+          </label>
+          <!-- Checkbox untuk opsi "ingat saya", dicentang secara default -->
+          <span class="psw"><a href="#">Forgot password?</a></span>
+          <!-- Tautan untuk "Lupa kata sandi?" dengan kelas psw untuk styling -->
+          <button class="coba" type="submit">
+            <a href="index.html"></a>Login
+          </button>
+          <!-- Tombol untuk mengirimkan formulir -->
+          <span class="dha">Don't have an account?<a href="#" id="openRegister">Register</a></span>
+        </div>
+
+        <div class="container">
+          <!-- Kontainer untuk tombol tambahan dan link dengan latar belakang berwarna abu-abu terang -->
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+            Cancel
+          </button>
+          <!-- Tombol untuk menutup modal tanpa mengirimkan formulir, mengatur display modal menjadi none -->
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal2">
+      <form class="modal-content animate" action="login-regis.html" method="post">
+        <!-- Formulir di dalam modal, menggunakan kelas modal-content untuk styling dan animate untuk animasi -->
+        <!-- action menentukan URL tujuan saat formulir dikirimkan, method POST mengirimkan data dengan cara POST -->
+
+        <div class="imgcontainer">
+          <!-- Kontainer untuk gambar avatar dan tombol tutup modal -->
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">
+            &times;
+          </span>
+          <h1>Registration</h1>
+          <!-- Gambar avatar di dalam modal, menggunakan kelas avatar untuk styling -->
+        </div>
+
+        <div class="container">
+          <!-- Kontainer untuk kolom input dan tombol di dalam formulir -->
+          <label for="uname"><b>Username</b></label>
+          <!-- Label untuk kolom input nama pengguna, dengan atribut for yang mengaitkan label dengan kolom input -->
+          <input type="text" placeholder="Enter Username" name="uname" required />
+          <!-- Kolom input untuk nama pengguna, dengan placeholder sebagai petunjuk dan required menjadikannya wajib diisi -->
+          <label for="Email"><b>Email</b></label>
+          <!-- Label untuk kolom input nama pengguna, dengan atribut for yang mengaitkan label dengan kolom input -->
+          <input type="email" placeholder="Enter Email" name="email" required />
+          <!-- Kolom input untuk nama pengguna, dengan placeholder sebagai petunjuk dan required menjadikannya wajib diisi -->
+          <label for="psw"><b>Password</b></label>
+          <!-- Label untuk kolom input kata sandi -->
+          <input type="password" placeholder="Enter Password" name="psw" required />
+          <!-- Kolom input untuk kata sandi, dengan placeholder sebagai petunjuk dan required menjadikannya wajib diisi -->
+          <label for="psw"><b>Confirm Password</b></label>
+          <!-- Label untuk kolom input kata sandi -->
+          <input type="password" placeholder="Confirm your password" name="psw" required />
+          <!-- Kolom input untuk kata sandi, dengan placeholder sebagai petunjuk dan required menjadikannya wajib diisi -->
+          <label>
+            <input type="checkbox" name="terms and conditions" required />
+            I agree to the terms and conditions
+          </label>
+          <button class="coba" type="submit">
+            <a href="login-regis.html"></a>Register
+          </button>
+          <span class="haa">Already have an account?<a href="#" id="openLogin">Login</a></span>
+        </div>
+        <!-- Tombol untuk mengirimkan formulir -->
+        <div class="container">
+          <!-- Kontainer untuk tombol tambahan dan link dengan latar belakang berwarna abu-abu terang -->
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">
+            Cancel
+          </button>
+          <!-- Tombol untuk menutup modal tanpa mengirimkan formulir, mengatur display modal menjadi none -->
+        </div>
+    </div>
+    </form>
+    </div>
+
+    <div class="kolom-member">
+      <div class="member">
+        <div class="member-image">
+          <img src="sathya.jpg" alt="" />
+        </div>
+        <div class="tombol">
+          <button>PENCET WI</button>
+        </div>
+      </div>
+
+      <div class="member">
+        <div class="member-image">
+          <img src="elijah.jpg" alt="" />
+        </div>
+        <div class="tombol">
+          <button>PENCET WI</button>
+        </div>
+      </div>
+
+      <div class="member">
+        <div class="member-image">
+          <img src="kusuma.jpg" alt="" />
+        </div>
+        <div class="tombol">
+          <button>PENCET WI</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
