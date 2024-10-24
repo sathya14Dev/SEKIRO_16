@@ -21,19 +21,29 @@ window.openState = function() {
     history.pushState(null,null,window.location.href)
 };
 
-const loginModal = document.getElementById('id01');
-const registerModal = document.getElementById('id02');
-const openRegister = document.getElementById('openRegister');
-const openLogin = document.getElementById('openLogin');
 
-openRegister.addEventListener('click', function (event) {
-    event.preventDefault();
-    loginModal.style.display = 'none';
-    registerModal.style.display = 'block';
-});
+document.addEventListener('DOMContentLoaded', function () {
+    const loginModal = document.getElementById('id01');
+    const registerModal = document.getElementById('id02');
+    const openRegister = document.getElementById('openRegister');
+    const openLogin = document.getElementById('openLogin');
+    const registerLogin = document.getElementById('registerLogin');
 
-openLogin.addEventListener('click', function (event) {
-    event.preventDefault();
-    loginModal.style.display = 'block';
-    registerModal.style.display = 'none';
+    openRegister.addEventListener('click', function (event) {
+        event.preventDefault();
+        loginModal.style.display = 'none';
+        registerModal.style.display = 'block';
+    });
+
+    openLogin.addEventListener('click', function (event) {
+        event.preventDefault();
+        loginModal.style.display = 'block';
+        registerModal.style.display = 'none';
+    });
+
+    registerLogin.addEventListener('click', function (event) {
+        event.preventDefault(); // Mencegah pengiriman form
+        registerModal.style.display = 'none';
+        loginModal.style.display = 'block';
+    });
 });
