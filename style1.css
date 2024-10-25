@@ -29,6 +29,7 @@ h1 {
 
 .show {
   display: block;
+  padding: 5px;
 }
 .hide {
   display: none;
