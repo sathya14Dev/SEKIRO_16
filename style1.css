@@ -27,6 +27,13 @@ h1 {
   margin-bottom: 15px;
 }
 
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
 .member {
   display: flex;
   flex-direction: column;
